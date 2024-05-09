@@ -1,0 +1,88 @@
+.offerPage{
+    margin-top: 15px;
+    margin-bottom: 30px;
+    display: flex;
+    gap: 30px;
+    &_inner{
+        flex: 1;
+        & h2 {
+            display: block;
+            border-bottom: 1px sloid #ddd;
+            height: 50px;
+            line-height: 50px;
+            margin-bottom: 50px;
+            position: relative;
+            &::after{
+                position: absolute;
+                content: '';
+                left: 0;
+                bottom: 6px;
+                height: 1px;
+                width: 100%;
+                background-color: #ddd;
+                z-index: 10;
+            }
+            & a{
+                position: relative;
+                &:hover{
+                    text-decoration: none;
+                    color: $color-tagLink;
+                }
+                &::after{
+                    position: absolute;
+                    content: '';
+                    left: 0;
+                    bottom: -5px;
+                    height: 2px;
+                    width: 100%;
+                    background-color: $color-hover-link;
+                    z-index: 11;
+                }
+            }
+        }
+    }
+    &_title{
+        display: block;
+        font-size: 20px;
+        line-height: 30px;
+        margin-bottom: 12px;
+        text-transform: uppercase;
+        background: url("./b.gif") repeat-x left 13px;
+    }
+
+    &_item{
+        margin-bottom: 20px;
+        display: flex;
+        align-items: flex-start;
+        gap: 15px   ;
+        & img{
+            width: 200px;
+        }
+    }
+    &_name{
+        font-size: 14px;
+        font-weight: 700;
+        line-height: 18px;
+        margin-bottom: 5px;
+        color: $color-tagP;
+    }
+    &_content{
+        // display: flex;
+        align-items: center;
+        gap: 10px;
+    }
+    &_desc{
+        color: $color-tagLink;
+        font-size: 13px;
+        line-height: 18px;
+        text-align: justify;
+    }
+
+    &_map{
+        & iframe{
+            height: 280px;
+            maw-width: 330px;
+            width: 100%;
+        }
+    }
+}

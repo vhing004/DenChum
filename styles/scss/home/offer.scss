@@ -1,0 +1,56 @@
+.offer{
+    margin-bottom: 30px;
+    &_list{
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 40px;
+    }
+    &_layout{
+        max-width: 380px;
+        width: 100%;
+        &.map{
+            max-width: 330px;
+        }
+    }
+    &_title{
+        display: block;
+        font-size: 20px;
+        line-height: 30px;
+        margin-bottom: 12px;
+        text-transform: uppercase;
+        background: url("./b.gif") repeat-x left 13px;
+    }
+
+    &_item{
+        margin-bottom: 20px;
+    }
+    &_name{
+        font-size: 14px;
+        font-weight: 700;
+        line-height: 18px;
+        margin-bottom: 5px;
+        color: $color-tagP;
+    }
+    &_content{
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        & img{
+            width: 90px;
+        }
+    }
+    &_desc{
+        color: $color-tagLink;
+        font-size: 13px;
+        line-height: 18px;
+        text-align: justify;
+    }
+
+    &_map{
+        & iframe{
+            height: 280px;
+            maw-width: 330px;
+            width: 100%;
+        }
+    }
+}

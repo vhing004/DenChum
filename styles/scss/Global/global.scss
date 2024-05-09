@@ -1,0 +1,54 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap");
+
+body {
+  background-color: $color-white;
+  font-family: "Roboto";
+}
+
+.container {
+  max-width: 1205px;
+  width: 100%;
+  margin: auto;
+}
+
+a {
+  color: $color-tagLink;
+  text-decoration: none;
+  user-select: none ;
+
+  &:hover {
+    color: $color-hover-link;
+    text-decoration: underline;
+  }
+}
+ul li{
+  list-style: none;
+}
+
+button, input{
+  border: 0;
+  outline: 0;
+  background-color: $color-white;
+}
+
+.price {
+  font-size: 22px;
+  font-weight: bold;
+  color: $color-text-price;
+}
+
+.priceThrough {
+  font-size: 14px;
+  font-weight: bold;
+  color: $color-through-line;
+  text-decoration: line-through;
+}
+
+.nameTitle {
+  font-size: 18px;
+  color: #fff;
+  background-color: $color-main;
+  line-height: 40px;
+  text-transform: uppercase;
+  padding: 0px 20px;
+}

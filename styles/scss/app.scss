@@ -1,0 +1,25 @@
+// Global
+@import "./Global/reset.scss";
+@import "./Global/variable.scss";
+@import "./Global/global.scss";
+
+// general
+@import "./general/header.scss";
+@import "./general/footer.scss";
+
+// home
+@import "./home/charisma.scss";
+@import "./home/striking.scss";
+@import "./home/product.scss";
+@import "./home/sale.scss";
+@import "./home/news.scss";
+@import "./home/offer.scss";
+@import "./home/register.scss";
+@import "./home/video.scss";
+
+// product
+@import "./product/product.scss";  
+// detail
+@import "./detail/detail.scss";
+// offer
+@import "./offer/offer.scss";

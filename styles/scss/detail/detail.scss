@@ -1,0 +1,323 @@
+.detail {
+  &_head {
+    display: block;
+    width: 100%;
+    height: 38px;
+    line-height: 38px;
+    font-size: 15px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    & i {
+      color: $color-tagLink;
+    }
+  }
+  &_container {
+    display: flex;
+    align-items: flex-start;
+    gap: 30px;
+  }
+
+  &_content {
+    max-width: 920px;
+    width: 100%;
+  }
+
+  &_product {
+    display: flex;
+    align-items: flex-start;
+    gap: 30px;
+  }
+
+  &_img {
+    & img {
+      // max-width: 100%;
+      width: 400px;
+    }
+  }
+  &_title {
+    font-size: 20px;
+    font-weight: 700;
+    color: $color-tagLink;
+    line-height: 30px;
+  }
+  &_in4 {
+    border-bottom: 1px dotted #ddd;
+    padding-bottom: 10px;
+    padding-left: 20px;
+    & li {
+      list-style: disc;
+      font-size: 14px;
+      line-height: 30px;
+      // font-weight: 500;
+      color: $color-tagLink;
+    }
+  }
+
+  &_reduce {
+    font-weight: 700;
+    font-size: 18px;
+    color: $color-tagP;
+    & b {
+      font-size: 24px;
+      color: #f00;
+    }
+  }
+
+  &_price {
+    display: flex;
+    align-items: center;
+    // justify-content: space-between;
+    & span {
+      display: block;
+      font-size: 15px;
+      color: $color-tagLink;
+    }
+  }
+  &_cost {
+    font-size: 38px;
+    color: #f00;
+    font-weight: 700;
+    line-height: 60px;
+    margin-right: 50px;
+    font-style: italic;
+  }
+
+  &_btn {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    & button {
+      font-size: 15px;
+      text-align: center;
+      text-transform: uppercase;
+      height: 42px;
+      max-width: 200px;
+      width: 100%;
+      color: $color-white;
+      font-weight: 700;
+      border-radius: 5px;
+      cursor: pointer;
+      & span {
+        font-size: 12px;
+        text-transform: capitalize;
+        font-weight: 500;
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+
+  &_hotline {
+    color: $color-tagP;
+    font-size: 14px;
+    line-height: 19px;
+    padding: 15px 0px 0px 25px;
+    text-align: left;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    & i {
+      font-size: 18px;
+      color: $color-hover-link;
+      margin-right: 5px;
+    }
+  }
+
+  &_address {
+    background-color: #efefef;
+    border-color: #f15928;
+    border-style: dashed;
+    border-width: 0.877193px;
+    color: #333;
+    font-size: 14px;
+    margin: 20px 0px 0px;
+    padding: 10px 25px 40px;
+    text-align: justify;
+  }
+
+  &_tabs {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 15px;
+    & button {
+      height: 40px;
+      line-height: 40px;
+      padding: 0px 20px;
+      text-transform: uppercase;
+      font-weight: 700;
+      color: $color-white;
+      background-color: #313135;
+      cursor: pointer;
+    }
+    & button.active{
+        background-color: #f00;
+    }
+    & button.hide{
+        background-color: #313135;
+    }
+  }
+
+  &_panes {
+    &-name{
+        margin-top: 15px;
+        font-size: 20px;
+        font-weight: 700;
+        margin-bottom: 15px;
+    }
+    &-price{
+        font-size: 15px;
+        color: $color-hover-link;
+        line-height: 15px;
+        font-weight: 700;
+        margin-bottom: 10px;
+    }
+    &-item{
+        display: none;
+    }
+    &-item.active{
+        display: block;
+    }
+    &-list {
+        margin-bottom: 10px;
+      & li {
+        line-height: 30px;
+        font-size: 15px;
+        color: $color-tagLink;
+        display: block;
+        & span {
+          display: block;
+          padding-left: 20px;
+          list-style: disc;
+        }
+      }
+    }
+
+    &-img {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    &-info {
+      & p {
+        line-height: 25px;
+        text-align: justify;
+        margin: 14px 0;
+        font-size: 16px;
+        color: $color-tagLink;
+        & b {
+          color: #00f;
+          font-weight: 700;
+        }
+      }
+    }
+  }
+
+  &_camket {
+    &-h3 {
+      font-weight: 700;
+      font-size: 18px;
+      color: $color-main;
+      text-transform: uppercase;
+      margin-bottom: 15px;
+    }
+    & li {
+      font-size: 14px;
+      text-align: justify;
+      color: $color-tagLink;
+      line-height: 20px;
+      list-style: disc;
+      margin: 20px;
+      & b {
+        color: $color-tagP;
+        font-weight: 700;
+      }
+    }
+  }
+
+  &_form {
+    background-image: url("https://denquanghung.com.vn/uploads/bg-form-register.jpg");
+    height: 300px;
+    background-size: cover;
+    margin: 15px 0;
+    &-inner {
+      margin-left: 40px;
+      max-width: 290px;
+      width: 100%;
+      box-shadow: #ccc 3px 3px 3px 0px;
+      background-color: $color-white;
+      height: inherit;
+    }
+    &-head {
+      background-color: $color-main;
+      color: $color-white;
+      padding: 10px 0;
+      & h3 {
+        font-size: 14px;
+        font-weight: 500;
+        // padding: 0px 60px;
+        text-align: center;
+        line-height: 20px;
+      }
+      & p {
+        font-size: 11px;
+        text-align: center;
+      }
+    }
+
+    &-input {
+      // display: flex;
+      // justify-content: center;
+      // align-items: center;
+      // flex-direction: column;
+      width: 250px;
+      margin: 10px auto 0;
+      & .input {
+        width: 100%;
+        background-color: #f2f2f2;
+        height: 30px;
+        display: block;
+        box-shadow: 3px 3px 3px #ccc;
+        border: 0px solid #fff;
+        font-size: 12px;
+        color: $color-tagP;
+        padding: 5px;
+        border-radius: 5px;
+        margin-bottom: 15px;
+      }
+      & div {
+        height: 60px;
+        background-color: #f2f2f2;
+        box-shadow: 3px 3px 3px #ccc;
+        margin-bottom: 15px;
+        & input {
+          background-color: transparent;
+          box-shadow: 0 0 0 #fff;
+          padding: 5px;
+        }
+      }
+      & button {
+        width: 100%;
+        display: block;
+        text-align: center;
+        height: 30px;
+        line-height: 30px;
+        background-color: $color-hover-link;
+        color: $color-white;
+        font-size: 14px;
+        box-shadow: 3px 3px 3px #ccc;
+        border-radius: 5px;
+        text-transform: uppercase;
+      }
+    }
+    &-offer {
+      height: 90px;
+    }
+  }
+
+//   &_comment{
+//     width: 100%;
+//   }
+}

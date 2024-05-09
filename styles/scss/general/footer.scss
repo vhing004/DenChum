@@ -1,0 +1,146 @@
+.footer {
+  background-color: #1b1718;
+  color: $color-white;
+  // padding-top: 15px;
+  & .container {
+    display: grid;
+    grid-template-areas:
+      "h1 h2"
+      "h3 h2";
+  }
+
+  &_intro {
+    grid-area: h1;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    max-width: 840px;
+    width: 100%;
+    margin-right: 65px;
+    margin-bottom: 25px;
+  }
+
+  &_title {
+    line-height: 40px;
+    text-transform: uppercase;
+    font-weight: 500;
+    position: relative;
+    margin-bottom: 10px;
+
+    &::after {
+      position: absolute;
+      content: "";
+      bottom: 0;
+      left: 0;
+      height: 2px;
+      width: 40px;
+      background-color: $color-hover-link;
+    }
+  }
+
+  &_content {
+    & a,
+    span {
+      display: block;
+      color: $color-white;
+      font-size: 14px;
+      margin-bottom: 10px;
+    }
+  }
+
+  &_contact {
+    grid-area: h2;
+    max-width: 295px;
+    width: 100%;
+    & img {
+      width: 35px;
+      height: 35px;
+    }
+  }
+
+  &__name {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    line-height: 40px;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+    & img {
+      width: 25px;
+      height: 25px;
+    }
+  }
+  &_fb {
+    width: 100%;
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 25px;
+  }
+  &_imgFb {
+    margin-right: 8px;
+    & img {
+      width: 50px;
+      height: 50px;
+    }
+  }
+  &_linkFb {
+    display: block;
+    color: $color-white;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    margin-bottom: 7px;
+    font-size: 16px;
+  }
+  &_followLink {
+    font-size: 14px;
+    padding: 3px 8px;
+    font-weight: 700;
+    background-color: $color-white;
+    & i {
+      margin-right: 5px;
+      color: #2f4c8a;
+      font-size: 16px;
+    }
+    &:hover {
+      color: $color-tagLink;
+      text-decoration: none;
+    }
+  }
+  &_connect {
+    text-transform: uppercase;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 40px;
+    border-bottom: 1px dotted $color-white;
+    margin-bottom: 20px;
+  }
+  &_icon {
+    & a {
+      &:hover {
+        text-decoration: none;
+      }
+    }
+    & img {
+      margin-right: 20px;
+    }
+  }
+
+  &_address {
+    grid-area: h3;
+    margin-bottom: 36px;
+    & span {
+      color: $color-hover-link;
+    }
+    & p {
+      margin-bottom: 10px;
+    }
+  }
+
+  &_end {
+    background-color: #323234;
+    color: $color-white;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+  }
+}

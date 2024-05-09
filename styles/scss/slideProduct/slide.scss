@@ -1,0 +1,24 @@
+
+.slick-slide {
+    margin-top: -40px;
+    position: relative;
+    height: auto !important;
+    transition: all 200ms ease;
+    // transform: translateY(400px);
+  }
+  
+  .slick-current {
+    opacity: 1;
+    transform: scale(1);
+    z-index: 1;
+  }
+  
+  .slick-slide .xyz {
+    opacity: 1;
+  }
+  
+  .slick-current .xyz {
+    opacity: 1;
+  }
+
+

@@ -1,0 +1,30 @@
+.video{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    height: 100%;
+    display: none;
+    z-index: 99;
+    &.active{
+        display: block;
+    }
+    &_inner{
+        position: absolute;
+        top: 30%;
+        left: 50%;
+        transform: translate(-50%, -30%);
+        max-width: 560px;
+        // width: 1000px;
+        & i{
+            font-size: 25px;
+            position: absolute;
+            top: 0;
+            right: 0;
+            transform: translate(100%, -100%);
+            color: $color-white;
+            cursor: pointer;
+        }
+    }
+}
