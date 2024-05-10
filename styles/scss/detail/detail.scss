@@ -176,6 +176,8 @@
     }
     &-item{
         display: none;
+        max-width: 920px;
+        width: 100%;
     }
     &-item.active{
         display: block;
@@ -317,7 +319,8 @@
     }
   }
 
-//   &_comment{
-//     width: 100%;
-//   }
+  &_comment{
+    max-width: 920px;
+    width: 100%;
+  }
 }

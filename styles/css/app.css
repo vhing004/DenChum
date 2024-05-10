@@ -1154,6 +1154,8 @@ button, input {
 }
 .detail_panes-item {
   display: none;
+  max-width: 920px;
+  width: 100%;
 }
 .detail_panes-item.active {
   display: block;
@@ -1278,6 +1280,10 @@ button, input {
 }
 .detail_form-offer {
   height: 90px;
+}
+.detail_comment {
+  max-width: 920px;
+  width: 100%;
 }
 
 .infoPage {
