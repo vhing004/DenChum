@@ -1280,6 +1280,68 @@ button, input {
   height: 90px;
 }
 
+.infoPage {
+  margin-top: 15px;
+  margin-bottom: 20px;
+}
+.infoPage_container {
+  display: flex;
+  align-items: flex-start;
+  gap: 30px;
+}
+.infoPage_link {
+  color: #00f;
+  font-weight: 700;
+}
+.infoPage_content {
+  flex: 1;
+}
+.infoPage_content p {
+  font-size: 16px;
+  text-align: justify;
+  color: #555;
+}
+.infoPage_content b {
+  display: block;
+  font-size: 17px;
+  font-weight: 700;
+  margin-bottom: -5px;
+}
+.infoPage_content img {
+  display: block;
+}
+.infoPage_title {
+  font-weight: 18;
+  font-weight: 700;
+  color: #333;
+  height: 31px;
+  line-height: 31px;
+}
+.infoPage_news-title {
+  height: 40px;
+  line-height: 40px;
+  text-transform: uppercase;
+  background-color: #f3f3f3;
+  padding: 0px 10px;
+  font-weight: 400;
+  color: #333;
+  margin-bottom: 10px;
+}
+.infoPage_news a {
+  height: 26px;
+  line-height: 26px;
+  display: block;
+  color: #555;
+  font-size: 15px;
+  padding: 0px 10px;
+  font-weight: 400;
+}
+.infoPage_news i {
+  color: #ec2027;
+  font-size: 13px;
+  margin-right: 5px;
+}
+
 .offerPage {
   margin-top: 15px;
   margin-bottom: 30px;
@@ -1357,11 +1419,6 @@ button, input {
   font-size: 13px;
   line-height: 18px;
   text-align: justify;
-}
-.offerPage_map iframe {
-  height: 280px;
-  maw-width: 330px;
-  width: 100%;
 }
 
 /*# sourceMappingURL=app.css.map */

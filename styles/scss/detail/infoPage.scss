@@ -1,0 +1,62 @@
+.infoPage{
+    margin-top: 15px;
+    margin-bottom: 20px;
+    &_container{
+        display: flex;
+        align-items: flex-start;
+        gap: 30px;
+    }
+    &_link{
+            color: #00f;
+            font-weight: 700;
+    }
+    &_content{
+        flex: 1;
+        & p{
+            font-size: 16px;
+            text-align: justify;
+            color: $color-tagLink;
+        }
+        & b{
+            display: block;
+            font-size: 17px;
+            font-weight: 700;
+            margin-bottom: -5px;
+        }
+        & img{
+            display: block;
+        }
+    }
+    &_title{
+        font-weight: 18;font-weight: 700;color: $color-tagP;
+        height: 31px;
+        line-height: 31px;
+    }
+
+    &_news{
+        &-title{
+            height: 40px;
+            line-height: 40px;
+            text-transform: uppercase;
+            background-color: #f3f3f3;
+            padding: 0px 10px;
+            font-weight: 400;
+            color: $color-tagP;
+            margin-bottom: 10px;
+        }
+        & a{
+            height: 26px;
+            line-height: 26px;
+            display: block;
+            color: $color-tagLink;
+            font-size: 15px;
+            padding: 0px 10px;
+            font-weight: 400;
+        }
+        & i{
+            color: $color-hover-link;
+            font-size: 13px;
+            margin-right: 5px;
+        }
+    }
+}
