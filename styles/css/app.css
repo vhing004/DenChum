@@ -1309,6 +1309,7 @@ button, input {
 }
 .infoPage_content img {
   display: block;
+  margin: auto;
 }
 .infoPage_title {
   font-weight: 18;
