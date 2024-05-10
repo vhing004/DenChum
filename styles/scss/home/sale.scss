@@ -12,14 +12,16 @@
   &_item {
     margin: 0 15px;
     & a {
-      color: $color-desc;
-      font-size: 13px;
-      font-weight: 700;
+      font-family: "Roboto", sans-serif !important;
+      color: $color-tagP;
+      font-size: 12px;
+      font-weight: 500;
       display: block;
       height: 100px;
       text-align: center;
       &:hover {
         color: $color-hover-link;
+        text-decoration: none ;
       }
     }
     & img {
@@ -80,7 +82,7 @@
 
 .slick-current {
   opacity: 1;
-  transform: scale(1.5);
+  transform: scale(2) translateY(10px);
   z-index: 99;
 }
 
@@ -90,4 +92,23 @@
 
 .slick-current .xyz {
   opacity: 1;
+}
+
+
+@media screen and (max-width: 767px) {
+  .sale{
+    padding: 20px 0 0px 0;
+    &_title{
+      font-size: 20px;
+      margin-bottom: 25px;
+    }
+    &_item{
+      & img{
+        margin-bottom: 5px;
+      }
+      & a{
+        font-size: 9px;
+      }
+    }
+  }
 }

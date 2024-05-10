@@ -13,18 +13,25 @@
         }
     }
     &_title{
-        display: block;
-        font-size: 20px;
-        line-height: 30px;
-        margin-bottom: 12px;
-        text-transform: uppercase;
-        background: url("./b.gif") repeat-x left 13px;
+        & a{
+            // display: block;
+            font-size: 20px;
+            height: 30px;
+            line-height: 30px;
+            overflow: hidden;
+            margin-bottom: 12px;
+            text-transform: uppercase;
+            background-color: #fff;
+            padding-right: 5px;
+        }
+        background: url("https://denquanghung.com.vn/themes/nguyenduc/images/b.gif") repeat-x left 13px;
     }
 
     &_item{
-        margin-bottom: 20px;
+        margin-top: 15px;
     }
     &_name{
+        display: block;
         font-size: 14px;
         font-weight: 700;
         line-height: 18px;
@@ -44,13 +51,53 @@
         font-size: 13px;
         line-height: 18px;
         text-align: justify;
+        display: -webkit-box;
+        -webkit-line-clamp: 3;  /* số dòng hiển thị */
+        -webkit-box-orient: vertical;
+        overflow: hidden;
     }
 
     &_map{
+        margin-top: 15px;
         & iframe{
             height: 280px;
-            maw-width: 330px;
+            max-width: 330px;
             width: 100%;
         }
     }
 }
+
+@media screen and (max-width: 767px) {
+    .offer{
+        &_list{
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            // place-items: center;
+        }
+        &_layout{
+            max-width: 500px;
+        }
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .offer{
+        &_title{
+            & a{
+                font-size: 17px;
+            }
+        }
+        &_list{
+            grid-template-columns: repeat(1, minmax(0, 1fr));
+        }
+        &_layout{
+            &.map{
+                max-width: 430px;
+            }
+        }
+        &_map{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        }
+    }

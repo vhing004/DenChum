@@ -1,0 +1,136 @@
+.header_mobile{
+    display: none;
+}
+@media screen and (max-width: 767px) {
+    .header_mobile{
+        display: block;
+        // max-width: 77px;
+        &-fixed{
+            background-color: $color-main;
+            position: fixed;
+            top: 0;
+            left: 0;
+            max-width: 766px;
+            width: 100%;
+            height: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 20px;
+            padding: 0px 20px;
+            z-index: 100;
+        }
+    
+        &-menu{
+            text-transform: uppercase;
+            font-weight: 700;
+            color: $color-white;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            cursor: pointer;
+            line-height: 50px;
+            // padding: 0px 10px;
+            & span{
+                font-size: 16px;
+                margin-right: 5px;
+            }
+        }
+        &-search{
+            display: flex;
+            align-items: center;
+            background-color: $color-white;
+            height: 32px;
+            max-width: 400px;
+            width: 100%;
+            & input{
+                width: 100%;
+                background-color: transparent;
+                height: 32px;
+                padding-left: 10px;
+            }
+        }
+        &-btn{
+            padding: 0 10px;
+            & i{
+                font-size: 18px;
+            }
+        }
+        &-cart{
+            cursor: pointer;
+            & i{
+                font-size: 22px;
+                padding: 0px 20px;
+                color: $color-white;
+            }
+        }
+        &-contact{
+            padding: 0px 15px;
+            height: 60px;
+            margin-top: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background-color: #eee;
+            & img{
+                display: block;
+                height: 50px;
+            }
+            & span{
+                font-size: 20px;
+                color: #f00;
+                font-weight: 700;
+            }
+        }
+    }
+
+    .menuList{
+        position: fixed;
+        top: 50px;
+        left: 0;
+        width: 100%;
+        z-index: 99;
+        display: none;
+        &_inner{
+            display: grid;
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+            gap: 15px;
+            background-color: #eee;
+            padding: 10px 15px;
+            
+        }
+        &_item{
+            border: solid 1px #dfdfdf;
+            border-radius: 5px;
+            &:hover{
+                text-decoration: none;
+                color: $color-tagP;
+            }
+            & img{
+                margin: 10px auto;
+                display: block;
+            }
+            & span{
+                display: block;
+                text-align: center;
+                height: 30px;
+                line-height: 15px;
+                overflow: hidden;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .header_mobile{
+        &-contact{
+            height: 50px;
+            & img{
+                height: 40px;
+            }
+            & span{
+                font-size: 18px;
+            }
+        }
+    }
+}

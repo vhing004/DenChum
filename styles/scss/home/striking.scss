@@ -1,27 +1,5 @@
 .striking{
     margin-bottom: 30px;
-    &_title{
-        display: block;
-        color: $color-tagLink;
-        font-size: 26px;
-        font-weight: 700;
-        text-align: center;
-        text-transform: uppercase;
-        position: relative;
-        margin-bottom: 20px;
-
-        &::after{
-            content: '';
-            position: absolute;
-            left: 50%;
-            bottom: -10px;
-            transform: translateX(-50%);
-            height: 3px;
-            width: 100px;
-            background-color: $color-main;
-        }
-    }
-
     &_list{
         display: grid;
         grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -51,5 +29,23 @@
         line-height: 35px;
         color: $color-white;
         background-color: rgb(95, 88, 79, 0.8);
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .striking{
+        &_list{
+            grid-template-columns: repeat(1, minmax(0, 1fr));
+            place-items: center;
+        }
+        &_item{
+            max-width: 500px;
+        }
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .striking{
+        margin-top: 15px;
     }
 }

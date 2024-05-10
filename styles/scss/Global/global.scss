@@ -14,23 +14,43 @@ body {
 a {
   color: $color-tagLink;
   text-decoration: none;
-  user-select: none ;
+  user-select: none;
 
   &:hover {
     color: $color-hover-link;
     text-decoration: underline;
   }
 }
-ul li{
+ul li {
   list-style: none;
 }
 
-button, input{
+button,
+input {
   border: 0;
   outline: 0;
   background-color: $color-white;
 }
-
+.title {
+  display: block;
+  color: #555;
+  font-size: 26px;
+  font-weight: 700;
+  text-align: center;
+  text-transform: uppercase;
+  position: relative;
+  margin-bottom: 20px;
+  &::after{
+    content: '';
+    position: absolute;
+    left: 50%;
+    bottom: -10px;
+    transform: translateX(-50%);
+    height: 3px;
+    width: 100px;
+    background-color: $color-main;
+}
+}
 .price {
   font-size: 22px;
   font-weight: bold;
@@ -51,4 +71,22 @@ button, input{
   line-height: 40px;
   text-transform: uppercase;
   padding: 0px 20px;
+}
+
+@media screen and (max-width: 900px) {
+  .container {
+    max-width: 800px;
+    margin: auto;
+    padding: 0px 20px;
+  }
+}
+
+
+@media screen and (max-width: 767px) {
+  .title{
+    font-size: 20px;
+  }
+  .price{
+    font-size: 20px;
+  }
 }

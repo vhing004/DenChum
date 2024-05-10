@@ -5,15 +5,18 @@
 
 // general
 @import "./general/header.scss";
+@import "./general/headerMobile.scss";
 @import "./general/footer.scss";
 
 // home
 @import "./home/charisma.scss";
 @import "./home/striking.scss";
 @import "./home/product.scss";
+@import "./home/project.scss";
 @import "./home/sale.scss";
 @import "./home/news.scss";
 @import "./home/offer.scss";
+@import "./home/allocation.scss";
 @import "./home/register.scss";
 @import "./home/video.scss";
 

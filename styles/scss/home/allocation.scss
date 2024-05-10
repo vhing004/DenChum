@@ -1,0 +1,44 @@
+.allocation {
+  margin: 40px 0;
+  & .title{
+    font-size: 22px;
+  }
+  &_container {
+    display: grid;
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+    gap: 20px;
+  }
+  &_img {
+    max-width: 200px;
+    display: block;
+    margin: auto;
+    & img {
+      width: 100%;
+    }
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .allocation{
+    &_container{
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+    &_img{
+      max-width: 160px;
+    }
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .allocation{
+    & .title{
+      font-size: 18px;
+    }
+    &_container{
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+    &_img{
+      max-width: 140px;
+    }
+  }
+}

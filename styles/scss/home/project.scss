@@ -1,0 +1,25 @@
+.project {
+  margin-bottom: 50px;
+ & .title{
+  font-size: 22px;
+ }
+
+  &_list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+  &_item {
+    max-width: 580px;
+    & .price {
+      display: block;
+      text-align: center;
+    }
+  }
+  &_img {
+    display: block;
+    & img {
+      width: 100%;
+    }
+  }
+}

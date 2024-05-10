@@ -1,23 +1,7 @@
 .news {
   margin-bottom: 30px;
-  &_title {
+  & .title{
     font-size: 20px;
-    text-transform: uppercase;
-    color: $color-tagP;
-    font-weight: 700;
-    text-align: center;
-    position: relative;
-    margin-bottom: 35px;
-    &::after {
-      position: absolute;
-      content: "";
-      left: 50%;
-      transform: translateX(-50%);
-      bottom: -10px;
-      height: 2px;
-      width: 100px;
-      background-color: $color-main;
-    }
   }
 
   &_description {
@@ -35,18 +19,27 @@
   &_item {
     max-width: 280px;
     border: 1px solid #e7e7e7;
+    &:last-child{
+      display: none;
+    }
     & img {
       width: 100%;
       margin-bottom: 15px;
     }
   }
   &_name {
-    display: block;
     padding: 0 15px 15px;
     font-size: 14px;
     font-weight: 700;
     color: $color-tagLink;
     text-align: center;
+    height: 35px;
+    margin-bottom: 10px;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;  /* số dòng hiển thị */
+  	-webkit-box-orient: vertical;
+    // text-overflow: ellipsis;
+  	overflow: hidden;
   }
 
   &_desc{
@@ -55,5 +48,50 @@
     display: block;
     padding: 0 20px 15px;
     font-size: 14px;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .news{
+    &_list{
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+    &_item{
+      &:last-child{
+        display: block;
+      }
+      & img{
+        margin-bottom: 5px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .news{
+    &_list{
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      place-items: center;
+    }
+    &_item{
+      max-width: 350px;
+      &:last-child{
+        display: none;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .news{
+    & .title{
+      font-size: 16px;
+    }
+    &_description{
+      font-size: 13px;
+    }
+    &_list{
+      grid-template-columns: repeat(1, minmax(0, 1fr));
+    }
   }
 }
