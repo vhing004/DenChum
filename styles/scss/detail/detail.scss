@@ -12,6 +12,9 @@
       color: $color-tagLink;
     }
   }
+  &_mobile {
+    display: none;
+  }
   &_container {
     display: flex;
     align-items: flex-start;
@@ -152,38 +155,38 @@
       background-color: #313135;
       cursor: pointer;
     }
-    & button.active{
-        background-color: #f00;
+    & button.active {
+      background-color: #f00;
     }
-    & button.hide{
-        background-color: #313135;
+    & button.hide {
+      background-color: #313135;
     }
   }
 
   &_panes {
-    &-name{
-        margin-top: 15px;
-        font-size: 20px;
-        font-weight: 700;
-        margin-bottom: 15px;
+    &-name {
+      margin-top: 15px;
+      font-size: 20px;
+      font-weight: 700;
+      margin-bottom: 15px;
     }
-    &-price{
-        font-size: 15px;
-        color: $color-hover-link;
-        line-height: 15px;
-        font-weight: 700;
-        margin-bottom: 10px;
+    &-price {
+      font-size: 15px;
+      color: $color-hover-link;
+      line-height: 15px;
+      font-weight: 700;
+      margin-bottom: 10px;
     }
-    &-item{
-        display: none;
-        max-width: 920px;
-        width: 100%;
+    &-item {
+      display: none;
+      max-width: 920px;
+      width: 100%;
     }
-    &-item.active{
-        display: block;
+    &-item.active {
+      display: block;
     }
     &-list {
-        margin-bottom: 10px;
+      margin-bottom: 10px;
       & li {
         line-height: 30px;
         font-size: 15px;
@@ -294,6 +297,7 @@
         background-color: #f2f2f2;
         box-shadow: 3px 3px 3px #ccc;
         margin-bottom: 15px;
+        border-radius: 5px;
         & input {
           background-color: transparent;
           box-shadow: 0 0 0 #fff;
@@ -319,8 +323,199 @@
     }
   }
 
-  &_comment{
+  &_comment {
     max-width: 920px;
     width: 100%;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .detail {
+    &_product {
+      flex-direction: column;
+      gap: 10px;
+    }
+    &_img {
+      & img {
+        max-width: 500px;
+        width: 100%;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .detail {
+    & .productPage_sidebar {
+      display: none;
+    }
+    & .hideMobile {
+      display: none;
+    }
+    &_inner {
+      display: none;
+    }
+    &_mobile {
+      display: block;
+      width: 100%;
+      &-info {
+        & p {
+          margin-bottom: 10px;
+        }
+        & .price {
+          color: #f00;
+        }
+      }
+      &-name {
+        font-size: 22px;
+        margin-bottom: 10px;
+      }
+      &-btn {
+        & button {
+          width: 100%;
+          border-radius: 5px;
+          display: block;
+          height: 60px;
+          font-size: 20px;
+          text-transform: uppercase;
+          text-align: center;
+          color: $color-white;
+          background-color: $color-hover-link;
+          margin-bottom: 15px;
+          & span {
+            font-size: 14px;
+            font-weight: 600;
+            text-transform: capitalize;
+            margin-top: 5px;
+          }
+          & a {
+            font-size: 16px;
+            font-weight: 700;
+            color: $color-hover-link;
+          }
+        }
+      }
+    }
+    &_container {
+      flex-direction: column;
+    }
+    &_img {
+      & img {
+        max-width: 750px;
+        width: 100%;
+      }
+    }
+
+    &_tabs {
+      & button.active {
+        display: block;
+        // width: 100%;
+        border-bottom: 2px solid $color-main;
+        height: 30px;
+        line-height: 30px;
+        font-size: 17px;
+        font-weight: 700;
+        padding: 0px 7px;
+        background-color: $color-main;
+        text-transform: none;
+      }
+    }
+    &_form{
+      border-radius: 5px;
+      overflow: hidden;
+      &-head{
+        & h3{
+          font-size: 16px;
+        }
+        & p{
+          font-size: 13px;
+        }
+      }
+      &-inner{
+        margin: 0;
+        max-width: 100%;
+      }
+      &-input{
+        padding: 15px;
+        margin-top: 0;
+        width: 100%;
+        background-color: #f2f2f2;
+        & .input{
+          background-color: $color-white;
+          border: 1px solid #ddd;
+        }
+        & div{
+          background-color: $color-white;
+          border: 1px solid #ddd;
+          border-radius: 5px;
+        }
+      }
+    }
+  }
+}
+
+
+@media screen and (max-width: 500px) {
+  .detail{
+    &_head{
+      & a{
+        font-size: 12px;
+        display: -webkit-box;
+        -webkit-line-clamp: 1;  /* số dòng hiển thị */
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
+    }
+    &_tabs{
+      & button.active{
+        font-size: 15px;
+      }
+    }
+    &_panes{
+      &-name{
+        font-size: 15px;
+      }
+      &_form-head{
+        & h3{
+          font-size: 15px;
+        }
+        & p{
+          font-size: 11px;
+        }
+      }
+      &-list{
+        & li{
+          font-size: 14px;
+        }
+      }
+      &-info{
+        & p{
+          font-size: 14px;
+        }
+      }
+    }
+    &_mobile{
+      &-name{
+        font-size: 18px;
+      }
+      &-info {
+        & b{
+          font-size: 14px;
+        }
+      }
+      &-btn{
+        & button{
+          font-size: 16px;
+          height: 50px;
+        }
+        & a{
+          font-size: 14px;
+        }
+        & span{
+          font-size: 12px;
+        }
+      }
+    }
   }
 }

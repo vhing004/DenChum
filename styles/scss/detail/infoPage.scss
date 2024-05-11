@@ -61,3 +61,35 @@
         }
     }
 }
+
+@media screen and (max-width: 767px) {
+    .infoPage{
+        & .productPage_sidebar{
+            display: none;  
+        }
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .infoPage{
+        &_content{
+            & p{
+                font-size: 14px;
+            }
+            & b{
+                font-size: 15px;
+            }
+        }
+        &_link{
+            font-size: 15px;
+        }
+        &_news{
+            &-title{
+            font-size: 16px;
+            }
+            & a{
+                font-size: 14px;
+            }
+        }
+    }
+}

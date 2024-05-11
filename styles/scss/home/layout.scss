@@ -2,7 +2,6 @@
     display: grid;
     grid-template-columns: repeat(2, 1fr);
   &_item {
-    // max-width: 1000px;
     position: relative;
   }
   &_content {
@@ -56,6 +55,7 @@
         grid-template-columns: repeat(1, 1fr);
         &_img{
             max-height: 400px;
+            height: 100%;
         }
     }
 }
@@ -63,7 +63,7 @@
 @media screen and (max-width: 900px) {
     .layout{
         &_img{
-            max-width: 820px;
+            max-width: 860px;
         }
     }
 }
@@ -76,6 +76,13 @@
 }
 @media screen and (max-width: 500px) {
     .layout{
+        &_img{
+            max-height: 250px;
+        }
+        &_title{
+            margin-bottom: 30px;
+        }
+        margin-bottom: 30px;
         &_content{
             left: 30px;
         }
