@@ -1432,6 +1432,16 @@ input {
   cursor: pointer;
 }
 
+@media screen and (max-width: 640px) {
+  .video_inner iframe {
+    width: 420px;
+  }
+}
+@media screen and (max-width: 500px) {
+  .video_inner iframe {
+    width: 350px;
+  }
+}
 .productPage {
   font-family: "Roboto";
   margin-top: 20px;
@@ -2183,6 +2193,9 @@ input {
 @media screen and (max-width: 767px) {
   .infoPage .productPage_sidebar {
     display: none;
+  }
+  .infoPage_title {
+    margin-top: 10px;
   }
 }
 @media screen and (max-width: 500px) {

@@ -28,3 +28,24 @@
         }
     }
 }
+
+@media screen and (max-width: 640px) {
+    .video{
+        &_inner{
+            & iframe{
+                width: 420px;
+                // width: 100%;
+            }
+        }
+    }
+}
+@media screen and (max-width: 500px) {
+    .video{
+        &_inner{
+            & iframe{
+                width: 350px;
+                // width: 100%;
+            }
+        }
+    }
+}
