@@ -24,7 +24,10 @@ a {
 ul li {
   list-style: none;
 }
-
+img{
+  max-width: 100%;
+  object-fit: cover;
+}
 button,
 input {
   border: 0;
