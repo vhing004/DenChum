@@ -23,3 +23,11 @@
     }
   }
 }
+@media screen and (max-width: 767px) {
+  .project{
+    &_list{
+      grid-template-columns: repeat(1, minmax(0, 1fr));
+      place-items: center;
+    }
+  }
+}

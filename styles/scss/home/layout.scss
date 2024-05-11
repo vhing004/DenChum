@@ -3,6 +3,7 @@
     grid-template-columns: repeat(2, 1fr);
   &_item {
     position: relative;
+    margin-top: -5px;
   }
   &_content {
     position: absolute;
