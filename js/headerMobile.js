@@ -3,3 +3,8 @@ $(document).ready(function(){
       $(".menuList").slideToggle(1);
     });
   });
+$(document).ready(function(){
+    $(".productMobile_menu").click(function(){
+      $(".productMobile_list").slideToggle(1);
+    });
+  });

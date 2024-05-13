@@ -8,9 +8,6 @@
     &_layout{
         max-width: 380px;
         width: 100%;
-        &.map{
-            max-width: 330px;
-        }
     }
     &_title{
         & a{
@@ -60,8 +57,7 @@
     &_map{
         margin-top: 15px;
         & iframe{
-            height: 280px;
-            max-width: 330px;
+            height: 300px;
             width: 100%;
         }
     }

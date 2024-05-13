@@ -19,13 +19,16 @@
     display: flex;
     align-items: flex-start;
     gap: 30px;
+    margin-top: 15px;
   }
 
   &_content {
     max-width: 920px;
     width: 100%;
   }
-
+  &_inner{
+    max-width: 490px;
+  }
   &_product {
     display: flex;
     align-items: flex-start;
@@ -33,9 +36,10 @@
   }
 
   &_img {
+    max-width: 500px;
     & img {
-      // max-width: 100%;
-      width: 400px;
+     width: 100%;
+     flex-shrink: 0;
     }
   }
   &_title {
@@ -144,7 +148,7 @@
     display: flex;
     align-items: center;
     gap: 10px;
-    margin-top: 15px;
+    margin-top: -20px;
     & button {
       height: 40px;
       line-height: 40px;

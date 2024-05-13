@@ -76,6 +76,13 @@ input {
   padding: 0px 20px;
 }
 
+@media screen and (max-width: 1026px) {
+  .container {
+    max-width: 950px;
+    margin: auto;
+    padding: 0px 20px;
+  }
+}
 @media screen and (max-width: 900px) {
   .container {
     max-width: 800px;
@@ -91,5 +98,13 @@ input {
   }
   .price{
     font-size: 20px;
+  }
+}
+@media screen and (max-width: 500px) {
+  .price{
+    font-size: 16px;
+  }
+  .priceThrough{
+    font-size: 12px;
   }
 }

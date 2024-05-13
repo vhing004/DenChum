@@ -1,0 +1,32 @@
+.productMobile_menu,
+.productMobile_list {
+  display: none;
+}
+
+@media screen and (max-width: 500px) {
+.productMobile {
+    &_menu {
+      display: block;
+      padding-right: 10px;
+      color: $color-main;
+    }
+    &_list {
+      display: none;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      width: 100%;
+      z-index: 12;
+      background-color: $color-white;
+      border: 1px solid $color-main;
+    }
+    &_item {
+      height: 32px;
+      line-height: 32px;
+      font-size: 14px;
+      font-weight: 500;
+      border-bottom: 1px dotted $color-main;
+      padding-left: 10px;
+    }
+  }
+}

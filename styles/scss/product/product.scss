@@ -15,12 +15,27 @@
   }
   &_layout {
     margin-bottom: 20px;
+    position: relative;
     .slick-slide {
       margin-top: -40px;
       position: relative;
       height: auto !important;
       transition: all 200ms ease;
     }
+   .arrow{
+    position: absolute;
+    top: -10px;
+    right: 10px;
+    transform: translate(0, -100%);
+    background-color: transparent;
+    color: $color-white;
+    cursor: pointer;
+   }
+   .pull-left{
+    right: 25px;
+    border-right: 1px solid $color-white;
+    padding-right: 8px;
+   }
 
     .slick-current {
       opacity: 1;
@@ -37,7 +52,6 @@
     }
   }
   &_title {
-    & a {
       display: block;
       text-transform: uppercase;
       color: $color-white;
@@ -48,7 +62,16 @@
       line-height: 36px;
       padding-left: 18px;
       border-left: 3px solid #000;
-    }
+      & a{
+        display: block;
+        text-transform: uppercase;
+        color: $color-white;
+        background-color: $color-main;
+        height: 36px;
+        font-size: 16px;
+        font-weight: 500;
+        line-height: 36px;
+      }
   }
   &_nameLink {
     display: block;
@@ -108,7 +131,7 @@
     line-height: 34px;
     background-color: #f5f5f5;
     border: 1px solid #e6e6e6;
-    margin-bottom: 20px;
+    width: 100%;
   }
   &_home {
     padding: 0px 20px 0 30px;
@@ -122,11 +145,16 @@
     color: $color-tagP;
     font-size: 14px;
     font-weight: 700;
+    padding-left: 30px;
+    background: url("https://denquanghung.com.vn/themes/nguyenduc/images/g8.gif")
+      no-repeat;
+    background-position: 0 50%;
   }
   &_product {
-    & h2 a {
+    &-h2 {
+      margin-top: 15px;
       display: block;
-      margin-bottom: 42px;
+      margin-bottom: 15px;
       font-size: 18px;
       font-weight: 700;
       color: $color-tagP;
@@ -145,10 +173,10 @@
       }
     }
   }
-  &_list {
+  & .product_list {
     display: grid;
     grid-template-columns: repeat(3, minmax(0, 1fr));
-    gap: 27px;
+    gap: 25px;
   }
 
   &_item {
@@ -178,12 +206,28 @@
   }
 }
 
-@media screen and (max-width: 900px) {
+@media screen and (max-width: 1024px) {
   .productPage {
     & .container {
       gap: 40px;
+      padding: 0;
     }
-    &_list {
+    & .product_list {
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+    &_price {
+      & .price {
+        font-size: 20px;
+      }
+    }
+  }
+}
+@media screen and (max-width: 900px) {
+  .productPage {
+    &_container {
+      gap: 30px;
+    }
+    & .product_list {
       grid-template-columns: repeat(2, minmax(0, 1fr));
     }
     &_price {
@@ -196,15 +240,22 @@
 
 @media screen and (max-width: 767px) {
   .productPage {
-    &_product{
-      & .productPage_head{
+    & .product{
+      margin: auto;
+      padding: 0 20px;
+    }
+    & .product_item:last-child{
+      display: block;
+    }
+    &_product {
+      & .productPage_head {
         display: none;
       }
     }
-    &_head{
+    &_head {
       margin-bottom: 0;
     }
-    &_layout{
+    &_layout {
       margin-bottom: 10px;
     }
     & .container {
@@ -227,28 +278,27 @@
     }
     & .sidebarMobile {
       display: block;
-      // margin-bottom: 0;
+      width: 100%;
     }
     &_mobile {
       &-list {
         display: flex;
         align-items: flex-start;
-        justify-content: space-between;
       }
-      &-item{
+      &-item {
         width: 50%;
       }
     }
-    &_link{
+    &_link {
       display: block;
       height: 36px;
       line-height: 36px;
-      font-size: 14px;
+      font-size: 18px;
       font-weight: 400;
       padding-left: 10px;
       display: -webkit-box;
       display: -webkit-box;
-      -webkit-line-clamp: 1;  /* số dòng hiển thị */
+      -webkit-line-clamp: 1; /* số dòng hiển thị */
       -webkit-box-orient: vertical;
       overflow: hidden;
       // border: 1px solid #ddd;
@@ -259,11 +309,15 @@
 
 @media screen and (max-width: 500px) {
   .productPage {
-    &_list {
-      grid-template-columns: repeat(1, minmax(0, 1fr));
+    & .product_list{
+      gap: 5px;
+      margin-bottom: 15px;
     }
-    &_item{
-      max-width: 500px;
+    & .product_info{
+      justify-content: center;
+    }
+    & .product_name{
+      text-align: center;
     }
   }
 }
