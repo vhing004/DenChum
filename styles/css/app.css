@@ -569,6 +569,7 @@ input {
 .footer .container {
   display: grid;
   grid-template-areas: "h1 h2" "h3 h2";
+  gap: 20px;
 }
 .footer_intro {
   grid-area: h1;
