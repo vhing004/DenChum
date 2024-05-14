@@ -4,7 +4,7 @@
   & .container {
     display: flex;
     align-items: flex-start;
-    gap: 60px;
+    gap: 40px;
   }
   &_sidebar {
     max-width: 250px;
@@ -22,20 +22,20 @@
       height: auto !important;
       transition: all 200ms ease;
     }
-   .arrow{
-    position: absolute;
-    top: -10px;
-    right: 10px;
-    transform: translate(0, -100%);
-    background-color: transparent;
-    color: $color-white;
-    cursor: pointer;
-   }
-   .pull-left{
-    right: 25px;
-    border-right: 1px solid $color-white;
-    padding-right: 8px;
-   }
+    .arrow {
+      position: absolute;
+      top: -10px;
+      right: 10px;
+      transform: translate(0, -100%);
+      background-color: transparent;
+      color: $color-white;
+      cursor: pointer;
+    }
+    .pull-left {
+      right: 25px;
+      border-right: 1px solid $color-white;
+      padding-right: 8px;
+    }
 
     .slick-current {
       opacity: 1;
@@ -52,6 +52,17 @@
     }
   }
   &_title {
+    display: block;
+    text-transform: uppercase;
+    color: $color-white;
+    background-color: $color-main;
+    height: 36px;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 36px;
+    padding-left: 18px;
+    border-left: 3px solid #000;
+    & a {
       display: block;
       text-transform: uppercase;
       color: $color-white;
@@ -60,18 +71,7 @@
       font-size: 16px;
       font-weight: 500;
       line-height: 36px;
-      padding-left: 18px;
-      border-left: 3px solid #000;
-      & a{
-        display: block;
-        text-transform: uppercase;
-        color: $color-white;
-        background-color: $color-main;
-        height: 36px;
-        font-size: 16px;
-        font-weight: 500;
-        line-height: 36px;
-      }
+    }
   }
   &_nameLink {
     display: block;
@@ -204,6 +204,54 @@
     align-items: flex-start;
     justify-content: space-between;
   }
+  &_desc{
+    margin-bottom: 20px;
+    & p{
+      font-size: 13pt;
+      line-height: 1.8;
+      color: $color-tagP;
+      font-weight: 300;
+      letter-spacing: 1.2;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+    & b{
+      font-size: 14pt;
+      color: $color-tagP;
+      font-weight: 700;
+      font-family: 'Times New Roman', Times, serif;
+      line-height: 1.8;
+    }
+  }
+  &_detail{
+    margin-bottom: 30px;
+    margin: 0 20px;
+    & .container{
+      display: block;
+      font-family: 'Times New Roman', Times, serif;
+      & p{
+        margin-top: 20px;
+        font-size: 14pt;
+        font-weight: 400;
+        margin-bottom: 15px;
+        line-height: 1.2;
+        & a{
+          color: #f00;
+          font-weight: 700;
+          &:hover{
+            text-decoration: none;
+          }
+        }
+        & span{
+          color:  rgb(255, 102, 0);
+          font-weight: 700;
+        }
+      }
+      & b{
+        font-size: 14pt;
+        font-weight: 700;
+      }
+    }
+  }
 }
 
 @media screen and (max-width: 1024px) {
@@ -218,6 +266,24 @@
     &_price {
       & .price {
         font-size: 20px;
+      }
+    }
+    &_desc{
+      & p{
+        font-size: 12pt;
+      }
+      & b{
+        font-size: 13pt;
+      }
+    }
+    &_detail{
+      & .container{
+        & b{
+          padding-top: 13pt;
+        }
+        & p{
+          font-size: 13pt;
+        }
       }
     }
   }
@@ -240,11 +306,11 @@
 
 @media screen and (max-width: 767px) {
   .productPage {
-    & .product{
+    & .product {
       margin: auto;
       padding: 0 20px;
     }
-    & .product_item:last-child{
+    & .product_item:last-child {
       display: block;
     }
     &_product {
@@ -301,22 +367,56 @@
       -webkit-line-clamp: 1; /* số dòng hiển thị */
       -webkit-box-orient: vertical;
       overflow: hidden;
-      // border: 1px solid #ddd;
-      // border-collapse: collapse;
+    }
+    &_detail{
+      margin-top: 20px;
+      & .container{
+        & p{
+          margin-top: 15px;
+        }
+      }
     }
   }
 }
 
 @media screen and (max-width: 500px) {
   .productPage {
-    & .product_list{
-      gap: 5px;
+    &_desc{
+      & p{
+        font-size: 11pt;
+      }
+      & b{
+        font-size: 12pt;
+      }
+    }
+    &_detail{
+      & .container{
+        & p{
+          font-size: 12pt;
+        }
+        & b{
+          font-size: 13pt;
+        }
+      }
+    }
+    &_product{
+      &-h2{
+        font-size: 16px;
+      }
+    }
+    &_link{
+      font-size: 14px;
+      height: 30px;
+      line-height: 30px;
+    }
+    & .product_list {
+      gap: 0;
       margin-bottom: 15px;
     }
-    & .product_info{
+    & .product_info {
       justify-content: center;
     }
-    & .product_name{
+    & .product_name {
       text-align: center;
     }
   }

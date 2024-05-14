@@ -145,45 +145,62 @@
     text-align: center;
     font-size: 13px;
   }
-}
-
-
-@media screen and (max-width: 900px) {
-  .footer{
-    & .container{
-      grid-template-areas: 
-      'h1 h1'
-      'h2 h2'
-      'h3 h3';
-    }
-    &_title{
-      font-size: 16px;
-    }
-    &_address{
-      margin-top: 15px;
+  &_rate {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    margin: 25px 0;
+    & a {
+      display: block;
+      width: 135px;
+      height: 50px;
+      background: url("https://denquanghung.com.vn/themes/nguyenduc/images/bct.png");
+      background-repeat: no-repeat;
     }
   }
 }
 
+@media screen and (max-width: 900px) {
+  .footer {
+    & .container {
+      grid-template-areas:
+        "h1 h1"
+        "h2 h2"
+        "h3 h3";
+    }
+    &_title {
+      font-size: 16px;
+    }
+    &_address {
+      margin-top: 15px;
+    }
+    &_rate{
+      justify-content: flex-start ;
+    }
+  }
+}
 
 @media screen and (max-width: 500px) {
-  .footer{
-    &_intro{
+  .footer {
+    &_intro {
       grid-template-columns: repeat(1, minmax(0, 1fr));
     }
-    &_title{
+    &_title {
       font-size: 14px;
     }
-    &_name{
+    &_name {
       font-size: 14px;
     }
-    &_follow{
-      & a{
+    &_follow {
+      & a {
         font-size: 14px;
       }
     }
-    &_followLink{
+    &_followLink {
       font-size: 14px;
+    }
+    &_rate{
+      margin: 15px 0  ;
     }
   }
 }

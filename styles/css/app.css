@@ -37,6 +37,10 @@ img {
   object-fit: cover;
 }
 
+p {
+  text-align: justify;
+}
+
 button,
 input {
   border: 0;
@@ -132,13 +136,10 @@ input {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin: auto;
-  max-width: 1205px;
 }
 .header_list {
   display: flex;
   align-items: center;
-  transform: translateX(-16px);
 }
 .header_list b {
   height: 12px;
@@ -147,10 +148,18 @@ input {
 }
 .header_item {
   line-height: 30px;
-  padding: 0px 16px;
+  padding: 0px 18px;
+}
+.header_item:first-child {
+  padding-left: 0;
 }
 .header_item a {
   font-weight: 500;
+  display: -webkit-box;
+  -webkit-line-clamp: 1; /* số dòng hiển thị */
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 .header_info {
   display: flex;
@@ -178,7 +187,6 @@ input {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 0 20px;
 }
 .header_between-logo img {
   width: 225px;
@@ -242,7 +250,6 @@ input {
   background-color: #d8b442;
 }
 .header_product-list {
-  max-width: 1205px;
   width: 100%;
   height: 50px;
   line-height: 50px;
@@ -314,20 +321,31 @@ input {
   background-color: #877127;
 }
 
-@media screen and (max-width: 1026px) {
-  .header_container {
-    justify-content: space-around;
-  }
+@media screen and (max-width: 1100px) {
   .header_info p {
     display: none;
+  }
+  .header_between {
+    padding: 0 20px;
   }
   .header_between-phone {
     display: none;
   }
+  .header_product-list {
+    padding: 0 20px;
+  }
+}
+@media screen and (max-width: 960px) {
+  .header_list {
+    transform: translateX(-20px);
+  }
+  .header_item:first-child {
+    padding-left: 0;
+  }
 }
 @media screen and (max-width: 900px) {
   .header_list {
-    margin: auto;
+    transform: translateX(0);
   }
   .header_info {
     display: none;
@@ -650,6 +668,19 @@ input {
   text-align: center;
   font-size: 13px;
 }
+.footer_rate {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  margin: 25px 0;
+}
+.footer_rate a {
+  display: block;
+  width: 135px;
+  height: 50px;
+  background: url("https://denquanghung.com.vn/themes/nguyenduc/images/bct.png");
+  background-repeat: no-repeat;
+}
 
 @media screen and (max-width: 900px) {
   .footer .container {
@@ -660,6 +691,9 @@ input {
   }
   .footer_address {
     margin-top: 15px;
+  }
+  .footer_rate {
+    justify-content: flex-start;
   }
 }
 @media screen and (max-width: 500px) {
@@ -677,6 +711,9 @@ input {
   }
   .footer_followLink {
     font-size: 14px;
+  }
+  .footer_rate {
+    margin: 15px 0;
   }
 }
 .slideVideo video {
@@ -874,7 +911,7 @@ input {
   width: 100%;
 }
 .product_item img:hover {
-  transform: scale(1.2);
+  opacity: 0.8;
 }
 .product_info {
   padding: 15px;
@@ -917,12 +954,15 @@ input {
 }
 .product_sale {
   position: absolute;
-  top: 30px;
+  top: 0;
   right: 0px;
   width: 60px;
   height: 60px;
   z-index: 2;
   font-weight: 700;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   color: #fff;
 }
 .product_sale::after {
@@ -932,7 +972,7 @@ input {
   left: 0;
   width: 100%;
   height: 100%;
-  transform: translate(-15%, -25%);
+  transform: translate(5px, 5px);
   background: url("https://denquanghung.com.vn/themes/nguyenduc/images/k.png") no-repeat left top;
   z-index: -1;
 }
@@ -974,7 +1014,7 @@ input {
 }
 @media screen and (max-width: 500px) {
   .product_list {
-    gap: 5px;
+    gap: 0px;
   }
   .product_price {
     flex-direction: column;
@@ -990,7 +1030,8 @@ input {
   }
   .product_item {
     background-color: #f0f0f0;
-    border: 1px solid #555;
+    border: 1px solid #ddd;
+    padding: 15px;
   }
   .product_info {
     padding: 10px 10px 0;
@@ -1511,6 +1552,9 @@ input {
   .register_form input {
     padding: 10px 15px;
   }
+  .register_form img {
+    height: 41px;
+  }
 }
 @media screen and (max-width: 500px) {
   .register .container {
@@ -1607,7 +1651,7 @@ input {
 .productPage .container {
   display: flex;
   align-items: flex-start;
-  gap: 60px;
+  gap: 40px;
 }
 .productPage_sidebar {
   max-width: 250px;
@@ -1795,6 +1839,54 @@ input {
   align-items: flex-start;
   justify-content: space-between;
 }
+.productPage_desc {
+  margin-bottom: 20px;
+}
+.productPage_desc p {
+  font-size: 13pt;
+  line-height: 1.8;
+  color: #333;
+  font-weight: 300;
+  letter-spacing: 1.2;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.productPage_desc b {
+  font-size: 14pt;
+  color: #333;
+  font-weight: 700;
+  font-family: "Times New Roman", Times, serif;
+  line-height: 1.8;
+}
+.productPage_detail {
+  margin-bottom: 30px;
+  margin: 0 20px;
+}
+.productPage_detail .container {
+  display: block;
+  font-family: "Times New Roman", Times, serif;
+}
+.productPage_detail .container p {
+  margin-top: 20px;
+  font-size: 14pt;
+  font-weight: 400;
+  margin-bottom: 15px;
+  line-height: 1.2;
+}
+.productPage_detail .container p a {
+  color: #f00;
+  font-weight: 700;
+}
+.productPage_detail .container p a:hover {
+  text-decoration: none;
+}
+.productPage_detail .container p span {
+  color: rgb(255, 102, 0);
+  font-weight: 700;
+}
+.productPage_detail .container b {
+  font-size: 14pt;
+  font-weight: 700;
+}
 
 @media screen and (max-width: 1024px) {
   .productPage .container {
@@ -1806,6 +1898,18 @@ input {
   }
   .productPage_price .price {
     font-size: 20px;
+  }
+  .productPage_desc p {
+    font-size: 12pt;
+  }
+  .productPage_desc b {
+    font-size: 13pt;
+  }
+  .productPage_detail .container b {
+    padding-top: 13pt;
+  }
+  .productPage_detail .container p {
+    font-size: 13pt;
   }
 }
 @media screen and (max-width: 900px) {
@@ -1878,10 +1982,36 @@ input {
     -webkit-box-orient: vertical;
     overflow: hidden;
   }
+  .productPage_detail {
+    margin-top: 20px;
+  }
+  .productPage_detail .container p {
+    margin-top: 15px;
+  }
 }
 @media screen and (max-width: 500px) {
+  .productPage_desc p {
+    font-size: 11pt;
+  }
+  .productPage_desc b {
+    font-size: 12pt;
+  }
+  .productPage_detail .container p {
+    font-size: 12pt;
+  }
+  .productPage_detail .container b {
+    font-size: 13pt;
+  }
+  .productPage_product-h2 {
+    font-size: 16px;
+  }
+  .productPage_link {
+    font-size: 14px;
+    height: 30px;
+    line-height: 30px;
+  }
   .productPage .product_list {
-    gap: 5px;
+    gap: 0;
     margin-bottom: 15px;
   }
   .productPage .product_info {
