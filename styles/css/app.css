@@ -16,6 +16,7 @@ body {
   max-width: 1205px;
   width: 100%;
   margin: auto;
+  padding: 0 20px;
 }
 
 a {
@@ -322,6 +323,9 @@ input {
 }
 
 @media screen and (max-width: 1100px) {
+  .header_container {
+    padding-left: 0;
+  }
   .header_info p {
     display: none;
   }
@@ -335,7 +339,15 @@ input {
     padding: 0 20px;
   }
 }
+@media screen and (max-width: 1026px) {
+  .header_list {
+    padding-left: 20px;
+  }
+}
 @media screen and (max-width: 960px) {
+  .header_container {
+    padding: 0 20px;
+  }
   .header_list {
     transform: translateX(-20px);
   }
@@ -345,7 +357,10 @@ input {
 }
 @media screen and (max-width: 900px) {
   .header_list {
-    transform: translateX(0);
+    padding-left: 0;
+  }
+  .header_item {
+    padding: 0px 15px;
   }
   .header_info {
     display: none;
@@ -366,7 +381,17 @@ input {
     font-size: 13px;
   }
 }
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 860px) {
+  .header_list {
+    transform: translateX(0);
+  }
+}
+@media screen and (max-width: 830px) {
+  .header_list {
+    transform: translateX(-20px);
+  }
+}
+@media screen and (max-width: 770px) {
   .header {
     display: none;
   }
@@ -375,7 +400,7 @@ input {
   display: none;
 }
 
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 770px) {
   .header_mobile {
     display: block;
   }
@@ -737,6 +762,7 @@ input {
   align-items: center;
   justify-content: space-between;
   gap: 20px;
+  padding: 20px;
 }
 .charisma_item {
   display: flex;
@@ -770,6 +796,11 @@ input {
   letter-spacing: -0.7px;
   font-size: 14px;
   font-weight: 500;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 .charisma_item span {
   font-size: 13px;
@@ -777,7 +808,7 @@ input {
   font-weight: 500;
 }
 
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 770px) {
   .charisma {
     height: 160px;
   }
@@ -824,7 +855,7 @@ input {
   background-color: rgba(95, 88, 79, 0.8);
 }
 
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 770px) {
   .striking_list {
     grid-template-columns: repeat(1, minmax(0, 1fr));
     place-items: center;
@@ -988,7 +1019,7 @@ input {
     display: block;
   }
 }
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 770px) {
   .product_title {
     font-size: 16px;
   }
@@ -1083,7 +1114,7 @@ input {
   width: 100%;
 }
 
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 770px) {
   .project_list {
     grid-template-columns: repeat(1, minmax(0, 1fr));
     place-items: center;
@@ -1157,7 +1188,7 @@ input {
     max-width: 860px;
   }
 }
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 770px) {
   .layout_content {
     left: 50px;
   }
@@ -1261,7 +1292,7 @@ input {
   opacity: 1;
 }
 
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 770px) {
   .sale {
     padding: 20px 0 0px 0;
   }
@@ -1344,7 +1375,7 @@ input {
     margin-bottom: 5px;
   }
 }
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 770px) {
   .news_list {
     grid-template-columns: repeat(2, minmax(0, 1fr));
     place-items: center;
@@ -1429,7 +1460,7 @@ input {
   width: 100%;
 }
 
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 770px) {
   .offer_list {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
@@ -1473,7 +1504,7 @@ input {
   width: 100%;
 }
 
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 770px) {
   .allocation_container {
     grid-template-columns: repeat(3, minmax(0, 1fr));
   }
@@ -1623,7 +1654,7 @@ input {
     right: -25%;
   }
 }
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 770px) {
   .video_inner iframe {
     transform: scale(1);
   }
@@ -1973,7 +2004,7 @@ input {
     display: block;
     height: 36px;
     line-height: 36px;
-    font-size: 18px;
+    font-size: 16px;
     font-weight: 400;
     padding-left: 10px;
     display: -webkit-box;
@@ -2104,6 +2135,9 @@ input {
   line-height: 60px;
   margin-right: 50px;
   font-style: italic;
+}
+.detail_sdt {
+  display: none;
 }
 .detail_btn {
   display: flex;
@@ -2326,7 +2360,39 @@ input {
   width: 100%;
 }
 
+@media screen and (max-width: 1100px) {
+  .detail_price {
+    flex-direction: column;
+    align-items: baseline;
+    margin-bottom: 10px;
+  }
+  .detail_btn {
+    flex-direction: column;
+    align-items: baseline;
+  }
+  .detail_btn button {
+    max-width: 450px;
+  }
+  .detail_hotline {
+    flex-direction: column;
+    gap: 10px;
+  }
+}
 @media screen and (max-width: 900px) {
+  .detail_price {
+    flex-direction: unset;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+  .detail_btn {
+    flex-direction: unset;
+    align-items: center;
+    margin-bottom: 0px;
+  }
+  .detail_hotline {
+    flex-direction: unset;
+    gap: 0px;
+  }
   .detail_product {
     flex-direction: column;
     gap: 10px;
@@ -2335,8 +2401,14 @@ input {
     max-width: 500px;
     width: 100%;
   }
+  .detail_address {
+    padding-bottom: 20px;
+  }
+  .detail_tabs {
+    margin-top: 20px;
+  }
 }
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 770px) {
   .detail .productPage_sidebar {
     display: none;
   }
@@ -2385,6 +2457,9 @@ input {
   }
   .detail_container {
     flex-direction: column;
+  }
+  .detail_img {
+    max-width: 750px;
   }
   .detail_img img {
     max-width: 750px;
@@ -2439,6 +2514,7 @@ input {
     -webkit-box-orient: vertical;
     overflow: hidden;
     text-overflow: ellipsis;
+    white-space: nowrap;
   }
   .detail_tabs button.active {
     font-size: 15px;
@@ -2538,7 +2614,7 @@ input {
   margin-right: 5px;
 }
 
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 770px) {
   .infoPage .productPage_sidebar {
     display: none;
   }
@@ -2577,7 +2653,7 @@ input {
   border-bottom: 1px sloid #ddd;
   height: 50px;
   line-height: 50px;
-  margin-bottom: 50px;
+  margin-bottom: 30px;
   position: relative;
 }
 .offerPage_inner h2::after {
@@ -2622,7 +2698,7 @@ input {
   gap: 15px;
 }
 .offerPage_item img {
-  width: 250px;
+  width: 210px;
 }
 .offerPage_name {
   font-size: 18px;
@@ -2643,6 +2719,12 @@ input {
 }
 
 @media screen and (max-width: 767px) {
+  .offerPage_inner h2 {
+    margin-bottom: 30px;
+  }
+  .offerPage_inner h2 a {
+    font-size: 20px;
+  }
   .offerPage .productPage_sidebar {
     display: none;
   }
@@ -2664,6 +2746,12 @@ input {
   }
 }
 @media screen and (max-width: 500px) {
+  .offerPage_inner h2 {
+    margin-bottom: 20px;
+  }
+  .offerPage_inner h2 a {
+    font-size: 18px;
+  }
   .offerPage_name {
     font-size: 14px;
   }

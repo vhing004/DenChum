@@ -10,7 +10,7 @@
       border-bottom: 1px sloid #ddd;
       height: 50px;
       line-height: 50px;
-      margin-bottom: 50px;
+      margin-bottom: 30px;
       position: relative;
       &::after {
         position: absolute;
@@ -56,7 +56,7 @@
     align-items: flex-start;
     gap: 15px;
     & img {
-      width: 250px;
+      width: 210px;
     }
   }
   &_name {
@@ -81,6 +81,14 @@
 
 @media screen and (max-width: 767px) {
   .offerPage {
+    &_inner{
+      & h2{
+        margin-bottom: 30px;
+        & a{
+          font-size: 20px;
+        }
+      }
+    }
     & .productPage_sidebar {
       display: none;
     }
@@ -104,6 +112,14 @@
 }
 @media screen and (max-width: 500px) {
   .offerPage {
+    &_inner{
+      & h2{
+        margin-bottom: 20px;
+        & a{
+          font-size: 18px;
+        }
+      }
+    }
     &_name {
       font-size: 14px;
     }
