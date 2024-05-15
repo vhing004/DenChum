@@ -43,6 +43,7 @@
         border: 0;
         outline: 0;
         background: transparent;
+        transform: translateY(1px);
     }
 }
 
@@ -81,7 +82,8 @@
                 font-size: 14px;
             }
             & img{
-                height: 35px;
+                height: 36px;
+                transform: translateY(0.8px);
             }
         }
         &_sale{

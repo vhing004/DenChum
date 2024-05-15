@@ -194,6 +194,9 @@
 
 @media screen and (max-width: 500px) {
   .product {
+    &_info{
+      background-color: $color-white;
+    }
     &_list {
       gap: 0px;
     }
@@ -210,9 +213,9 @@
       display: none;
     }
     &_item {
-      background-color: #f0f0f0;
+      // background-color: #f0f0f0;
       border: 1px solid #ddd;
-      padding: 15px;
+      padding: 15px 15px 5px;
     }
     &_info {
       padding: 10px 10px 0;
