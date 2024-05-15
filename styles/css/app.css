@@ -1562,6 +1562,7 @@ input {
   font-size: 17px;
   padding: 15px;
   color: #555;
+  border-radius: 0;
 }
 .register_form img {
   height: 50px;
