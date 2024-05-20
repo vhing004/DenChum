@@ -37,9 +37,11 @@
 
   &_img {
     max-width: 500px;
+    width: 100%;
+    max-height: 400px;
+    overflow: hidden;
     & img {
      width: 100%;
-     flex-shrink: 0;
     }
   }
   &_title {
@@ -207,8 +209,13 @@
     }
 
     &-img {
-      text-align: center;
+      display: block;
+      margin-inline: auto;
+      max-width: 770px;
       margin-bottom: 20px;
+      & img{
+        width: 100%;
+      }
     }
 
     &-info {
@@ -279,10 +286,6 @@
     }
 
     &-input {
-      // display: flex;
-      // justify-content: center;
-      // align-items: center;
-      // flex-direction: column;
       width: 250px;
       margin: 10px auto 0;
       & .input {
@@ -356,6 +359,9 @@
 }
 @media screen and (max-width: 900px) {
   .detail {
+    &_img{
+      max-height: none;
+    }
     &_price{
       flex-direction: unset;
       align-items: center;

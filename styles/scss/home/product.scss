@@ -1,8 +1,5 @@
 .product {
   margin-bottom: 40px;
-  // & .productMobile_menu, .productMobile_list {
-  //   display: none;
-  // }
   &_head {
     display: flex;
     align-items: center;
@@ -67,8 +64,12 @@
   &_item {
     max-width: 280px;
     width: 100%;
+    max-height: 500px;
+    height: 100%;
     overflow: hidden;
     position: relative;
+    display: flex;
+    flex-direction: column;
     &:last-child {
       display: none;
     }
@@ -77,6 +78,9 @@
       &:hover {
         opacity: 0.8;
       }
+    }
+    &-img{
+      flex: 1;
     }
   }
   &_info {
@@ -194,6 +198,12 @@
 
 @media screen and (max-width: 500px) {
   .product {
+    &_promotion{
+      margin-top: 5px;
+      & .priceThrough{
+        margin-bottom: 5px;
+      }
+    }
     &_info{
       background-color: $color-white;
     }
@@ -218,7 +228,7 @@
       padding: 15px 15px 5px;
     }
     &_info {
-      padding: 10px 10px 0;
+      padding: 10px 2px 0;
     }
     &_cost {
       font-size: 22px;

@@ -4,7 +4,9 @@ body {
   background-color: $color-white;
   font-family: "Roboto";
 }
-
+body.no-scroll {
+  overflow: hidden;
+}
 .container {
   max-width: 1205px;
   width: 100%;

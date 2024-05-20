@@ -1,92 +1,85 @@
-.video{
+
+.popup {
+    display: none;
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
-    background-color: rgba(0, 0, 0, 0.6);
     height: 100%;
-    display: none;
+    background: rgba(0, 0, 0, 0.8);
+    justify-content: center;
+    align-items: center;
     z-index: 99;
-    &.active{
-        display: block;
-    }
-    &_inner{
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        // max-width: 560px;
+}
+
+.video-container {
+    width: 100%;
+    height: 100%;
+}
+
+.popup iframe {
+    width: 1000px;
+    height: 600px;
+}
+
+.popup .close {
+    position: absolute;
+    top: 50px;
+    right: 50px;
+    font-size: 50px;
+    color: white;
+    cursor: pointer;
+}
+
+@media screen and (max-width: 1200px) {
+    .popup{
         & iframe{
-            transform: scale(2);
-        }
-        & i{
-            font-size: 35px;
-            position: absolute;
-            top: -50%;
-            right: -50%;
-            transform: translate(100%, -100%);
-            color: $color-white;
-            cursor: pointer;
+            width: 950px;
+            height: 500px;
         }
     }
 }
-
 @media screen and (max-width: 1024px) {
-    .video{
-        &_inner{
-            & iframe{
-                transform: scale(1.7);
-            }
-            & i{
-                font-size: 35px;
-                transform: translate(-100%, -10%);
-            }
+    .popup{
+        & iframe{
+            width: 800px;
+            height: 450px;
         }
     }
 }
 @media screen and (max-width: 900px) {
-    .video{
-        &_inner{
-            & iframe{
-                transform: scale(1.3);
-            }
-            & i{
-                top: -22%;
-                right: -25%;
-            }
+    .popup{
+        & iframe{
+            width: 700px;
+            height: 400px;
         }
     }
 }
 @media screen and (max-width: 770px) {
-    .video{
-        &_inner{
-            & iframe{
-                transform: scale(1);
-            }
-            & i{
-                font-size: 25px;
-                top: -15%;
-                right: -10%;
-                transform: translate(-100%, 100%);
-            }
+    .popup{
+        & iframe{
+            width: 600px;
+            height: 350px;
+        }
+        & .close{
+            font-size: 40px;
+            right: 20px;
         }
     }
 }
-@media screen and (max-width: 640px) {
-    .video{
-        &_inner{
-            & iframe{
-                width: 450px;
-            }
+@media screen and (max-width: 650px) {
+    .popup{
+        & iframe{
+            width: 500px;
+            height: 300px;
         }
     }
 }
 @media screen and (max-width: 500px) {
-    .video{
-        &_inner{
-            & iframe{
-                width: 350px;
-            }
+    .popup{
+        & iframe{
+            width: 350px;
+            height: 250px;
         }
     }
 }
