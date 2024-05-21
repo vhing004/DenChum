@@ -27,7 +27,7 @@
     width: 100%;
   }
   &_inner{
-    max-width: 490px;
+    flex: 1;
   }
   &_product {
     display: flex;
@@ -36,7 +36,7 @@
   }
 
   &_img {
-    max-width: 500px;
+    max-width: 400px;
     width: 100%;
     max-height: 400px;
     overflow: hidden;
